@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "T2A2_Marketplace",
+            "driver": "PostgreSQL",
+            "name": "planners",
+            "port": 5432,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "benaitcheson",
+            "password": ""
+        }
+    ]
+}
