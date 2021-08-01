@@ -1,3 +1,4 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import "base/global";
+
+// make sure you import all the scss files here
+// @import "components/etc";
