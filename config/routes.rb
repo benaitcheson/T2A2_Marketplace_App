@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  # needs a root directory
-  # root to:
+  root to: "planner#index"
 
   # view
   get "/planner", to: "planner#index"
