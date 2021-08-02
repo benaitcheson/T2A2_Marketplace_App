@@ -1,5 +1,7 @@
-# Coder Academy - Ruby on Rails Marketplace Application 
-<img src="https://img.shields.io/tokei/lines/github/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/languages/top/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/languages/count/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/repo-size/benaitcheson/T2A2_Marketplace_App?style=flat-square">
+<img align="centre" src="https://img.shields.io/tokei/lines/github/benaitcheson/T2A2_Marketplace_App?style=flat-square">
+<img src="https://img.shields.io/github/languages/top/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/languages/count/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/repo-size/benaitcheson/T2A2_Marketplace_App?style=flat-square">
+
+# Coder Academy - Ruby on Rails Marketplace Application
 
 <p align="center">
   <h2 align="center">Assignment 2 - Term 2 (T2A2)</h2>
@@ -15,26 +17,30 @@
 ---
 
 ## Table of Contents
+
 <!-- TOC depthFrom:1 depthTo:4 withLinks:1 orderedList:0 -->
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Statement of Purpose](#statement-of-purpose)
-  - [Sitemap](#sitemap)
-  - [Wireframes](#wireframes)
-  - [Target Audience](#target-audience)
-  - [Technology Stack](#technology-stack)
-  - [User Stories](#user-stories)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Database Schema Design](#database-schema-design)
-  - [High-Level Components](#high-level-components)
-  - [Third Party Apps/Services](#third-party-appsservices)
-  - [Explain the Rails Models](#explain-the-rails-models)
-  - [Rails Controller](#rails-controller)
+
+  - [About the Project](#about-the-project)
+    - [**Built With (Tech Stack)**](#built-with-tech-stack)
+    - [**Statement of Purpose**](#statement-of-purpose)
+    - [**Sitemap**](#sitemap)
+    - [**Wireframes**](#wireframes)
+    - [**Target Audience**](#target-audience)
+    - [**User Stories**](#user-stories)
+    - [**Entity Relationship Diagram**](#entity-relationship-diagram)
+    - [**Database Schema Design**](#database-schema-design)
+    - [**High-Level Components**](#high-level-components)
+    - [**Third Party Apps/Services**](#third-party-appsservices)
+    - [**Explain the Rails Models**](#explain-the-rails-models)
+    - [**Rails Controller**](#rails-controller)
+  - [Contributing](#contributing)
   - [Authors](#authors)
   - [Acknowledgments](#acknowledgments)
+
 <!-- /TOC -->
 
 ## About the Project
+
 This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can choose which client can receive the appropriate advice.
 
 ### **Built With (Tech Stack)**
@@ -42,6 +48,7 @@ This application was designed to make financial planning costs more competitive 
 (Part of R11)
 
 ### **Statement of Purpose**
+
 Identify the problem you are trying to solve (R7)
 
 Why is it a problem that needs solving? (R8)
@@ -72,7 +79,7 @@ Why is it a problem that needs solving? (R8)
 
 (R14)
 
-Discuss the database relations to be implemented in the application. 
+Discuss the database relations to be implemented in the application.
 
 *Provides coherent discussion of the database relations, with reference to the ERD*
 
@@ -92,21 +99,19 @@ My guess is this is where the postgresql and AWS info goes...
 
 *Precisely explains and shows understanding of the different high-level components of the app*
 
-
 ### **Third Party Apps/Services**
 
- - Devise:
- - Heroku:
- - GitHub:
- - Stripe:
- - Bootstrap (MAYBE):
- - Balsamiq:
- - Trello/Jira:
- - Git Guardian:
- - DB Diagram.io:
- - Postgresql:
- - Amazon Web Services:
- - 
+- Devise:
+- Heroku:
+- GitHub:
+- Stripe:
+- Bootstrap (MAYBE):
+- Balsamiq:
+- Trello/Jira:
+- Git Guardian:
+- DB Diagram.io:
+- Postgresql:
+- Amazon Web Services:
 
 (R16)
 
@@ -117,7 +122,6 @@ My guess is this is where the postgresql and AWS info goes...
 (R17)
 
 *Complete discussion of the project’s models with an understanding of how its active record associations function*
-
 
 ### **Rails Controller**
 
@@ -139,15 +143,14 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 ---
+
 ## Authors
+
 Ben Aitcheson - [My Github account][1]
 
 ---
+
 ## Acknowledgments
+
 Thanks to the team at Coder Academy for their support.
 
-
-[1]: https://github.com/benaitcheson
-[2]: https://github.com/benaitcheson/T2A2_Marketplace_App/
-[3]: https://t2a2-marketplace-app.herokuapp.com/
-[4]: https://trello.com/
