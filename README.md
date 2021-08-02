@@ -35,6 +35,7 @@
     - [Explain the Rails Models](#explain-the-rails-models)
     - [Rails Controller](#rails-controller)
   - [Contributing](#contributing)
+  - [Roadmap](#roadmap)
   - [Authors](#authors)
   - [Acknowledgments](#acknowledgments)
 
@@ -42,9 +43,14 @@
 
 ## About the Project
 
-This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can choose which client can receive the appropriate advice.
+This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can tailor their advice to each client.
 
 ### **Built With (Tech Stack)**
+
+- Ruby on Rails
+- HTML
+- CSS
+- 
 
 (Part of R11)
 
@@ -130,6 +136,11 @@ Describe the way tasks are allocated and tracked in the project.
 (R20)
 
 *Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used*
+
+---
+
+## Roadmap
+
 
 ---
 
