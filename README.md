@@ -1,7 +1,8 @@
-<img align="centre" src="https://img.shields.io/tokei/lines/github/benaitcheson/T2A2_Marketplace_App?style=flat-square">
-<img src="https://img.shields.io/github/languages/top/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/languages/count/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/repo-size/benaitcheson/T2A2_Marketplace_App?style=flat-square">
-
 # Coder Academy - Ruby on Rails Marketplace Application
+
+<div style="text-align:center">
+<img align="centre" src="https://img.shields.io/tokei/lines/github/benaitcheson/T2A2_Marketplace_App?style=flat-square">
+<img src="https://img.shields.io/github/languages/top/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/languages/count/benaitcheson/T2A2_Marketplace_App?style=flat-square"> <img src="https://img.shields.io/github/repo-size/benaitcheson/T2A2_Marketplace_App?style=flat-square"></div>
 
 <p align="center">
   <h2 align="center">Assignment 2 - Term 2 (T2A2)</h2>
@@ -21,18 +22,18 @@
 <!-- TOC depthFrom:1 depthTo:4 withLinks:1 orderedList:0 -->
 
   - [About the Project](#about-the-project)
-    - [**Built With (Tech Stack)**](#built-with-tech-stack)
-    - [**Statement of Purpose**](#statement-of-purpose)
-    - [**Sitemap**](#sitemap)
-    - [**Wireframes**](#wireframes)
-    - [**Target Audience**](#target-audience)
-    - [**User Stories**](#user-stories)
-    - [**Entity Relationship Diagram**](#entity-relationship-diagram)
-    - [**Database Schema Design**](#database-schema-design)
-    - [**High-Level Components**](#high-level-components)
-    - [**Third Party Apps/Services**](#third-party-appsservices)
-    - [**Explain the Rails Models**](#explain-the-rails-models)
-    - [**Rails Controller**](#rails-controller)
+    - [Built With (Tech Stack)](#built-with-tech-stack)
+    - [Statement of Purpose](#statement-of-purpose)
+    - [Sitemap](#sitemap)
+    - [Wireframes](#wireframes)
+    - [Target Audience](#target-audience)
+    - [User Stories](#user-stories)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
+    - [Database Schema Design](#database-schema-design)
+    - [High-Level Components](#high-level-components)
+    - [Third Party Apps/Services](#third-party-appsservices)
+    - [Explain the Rails Models](#explain-the-rails-models)
+    - [Rails Controller](#rails-controller)
   - [Contributing](#contributing)
   - [Authors](#authors)
   - [Acknowledgments](#acknowledgments)
@@ -123,7 +124,7 @@ My guess is this is where the postgresql and AWS info goes...
 
 *Complete discussion of the project’s models with an understanding of how its active record associations function*
 
-### **Rails Controller**
+### Rails Controller
 
 Describe the way tasks are allocated and tracked in the project.
 (R20)
@@ -134,19 +135,19 @@ Describe the way tasks are allocated and tracked in the project.
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are appreciated.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b YourBranchName`)
+3. Commit your Changes (`git commit -m 'Add a feature/amendment'`)
+4. Push to the Branch (`git push origin YourBranchName`)
 5. Open a Pull Request
 
 ---
 
 ## Authors
 
-Ben Aitcheson - [My Github account][1]
+Ben Aitcheson - [My Github account][insert link]
 
 ---
 
