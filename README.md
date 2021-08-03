@@ -111,6 +111,7 @@ My guess is this is where the postgresql and AWS info goes...
 - Devise:
 - Heroku:
 - GitHub:
+- Git:
 - Stripe:
 - Bootstrap (MAYBE):
 - Balsamiq:
@@ -119,6 +120,9 @@ My guess is this is where the postgresql and AWS info goes...
 - DB Diagram.io:
 - Postgresql:
 - Amazon Web Services:
+- Ultrahook: 
+- Visual Studio Code:
+- 
 
 (R16)
 
