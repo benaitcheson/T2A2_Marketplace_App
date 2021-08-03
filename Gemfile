@@ -47,7 +47,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Authentication Gem
+# Gem's required for this project
 gem 'devise'
 gem 'stripe'
 gem 'ultrahook'
+gem 'bootstrap', '~> 5.0.1'
+gem 'simple_form'
+gem 'jquery-rails'
