@@ -43,14 +43,20 @@
 
 ## About the Project
 
-This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can tailor their advice to each client.
+This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can tailor their advice to each client. Paired with online advice this can give sound financial advice to younger investors at a cheaper rate.
 
 ### **Built With (Tech Stack)**
 
-- Ruby on Rails
-- HTML
-- CSS
-- 
+The core programming languages used to build this application are:
+- Ruby (3.0.1) on Rails (6.1.4)
+- HTML5
+- CSS3/SCSS
+- JavaScript (ES6)
+- Postgresql 13.3
+
+These are stored within a public repository on GitHub, because this application has back-end components GitHub pages was inadequate. Heroku was used instead to host the application. Gems and third party software can be viewed [here](#third-party-appsservices).
+
+**Why I picked these. maybe?**
 
 (Part of R11)
 
@@ -58,7 +64,18 @@ This application was designed to make financial planning costs more competitive 
 
 Identify the problem you are trying to solve (R7)
 
+Research has uncovered the cost of financial advice and it has shown that for those with a lot the cost of advice is small but for those with a little (generally younger clients) the cost is a significant amount. With most Statements of Advice (SoA) in Australia starting at $1,500.00 this is 10% if your net worth is $15,000.
+
+
+
+
 Why is it a problem that needs solving? (R8)
+
+Younger people generally forego advice because they have time on their side. For example, make a crypto investment mistake and you have 40 years worth of working to get that bad investment back. With cheaper advice early on, younger investors can have a more stable path that could see them retire early.
+
+Find-A-Planner can help put Advisors side by side in competition to lower their rates for younger investors. This is a great alternative to help reduce costs for Advisors giving online advice to young investors who don't need complex advice.
+
+
 
 *Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting*
 
@@ -66,13 +83,88 @@ Why is it a problem that needs solving? (R8)
 
 ### **Sitemap**
 
+Initially this is what I wanted to create for the Find-A-Planner application:
+
+<img src="../T2A2_Marketplace_App/docs/gloomap1.png" alt="Initial Sitemap">
+
+Sitemap created with [Gloomaps](www.gloomaps.com).
+
+Each person whether a planner or a customer has a different login screen. They then put in the appropriate details and land on a dashboard. Customers can see all the different planners from the advice type they selected. While the planners can see some customer information but no private customer details in their dashboard. This protects customer privacy. In this dashboard both parties can edit their details and view their current advice orders.
+
+This is how it ended up:
+
+> Insert final sitemap here.
+
+<img src="" alt="Final Sitemap">
+
+> Blurb.
+
 (Part of R11)
 
 ### **Wireframes**
 
+This application follow the mobile first approach. The wireframes will consist of a mobile version then a desktop version. All other formats have been included in the road map but unfortunately do not have a timeframe for completion.
+
+Home Page Mobile:
+<img src="" alt="Home Page Mobile">
+
+Home Page Desktop:
+<img src="" alt="Home Page Desktop">
+
+How To Page Mobile:
+<img src="" alt="How To Page Mobile">
+
+How To Page Desktop:
+<img src="" alt="How To Page Desktop">
+
+Products Page Mobile:
+<img src="" alt="Products Page Mobil">
+
+Products Page Desktop:
+<img src="" alt="Products Page Desktop">
+
+Client Login Page Mobile:
+<img src="" alt="Client Login Page Mobile">
+
+Client Login Page Desktop:
+<img src="" alt="Client Login Page Desktop">
+
+Client Dashboard Page Mobile:
+<img src="" alt="Client Dashboard Page Mobile">
+
+Client Dashboard Page Desktop:
+<img src="" alt="Client Dashboard Page Deskto">
+
+Client Payment Mobile:
+<img src="" alt="Client Payment Mobile">
+
+Client Payment Desktop:
+<img src="" alt="Client Payment Desktop">
+
+Planner Login Page Mobile:
+<img src="" alt="Planner Login Page Mobil">
+
+Planner Login Page Desktop:
+<img src="" alt="Planner Login Page Deskto">
+
+Planner Dashboard Page Mobile:
+<img src="" alt="Planner Dashboard Page Mobile">
+
+Planner Dashboard Page Desktop:
+<img src="" alt="Planner Dashboard Page Desktop">
+
+Planner Payment Mobile:
+<img src="" alt="Planner Payment Mobile">
+
+Planner Payment Desktop:
+<img src="" alt="Planner Payment Desktop">
+
 *More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)*
 
 ### **Target Audience**
+
+The target audience for this application is people aged below 35 or someone with assets under $100,000. 
+
 
 (Part of R11)
 
@@ -101,6 +193,8 @@ Discuss the database relations to be implemented in the application.
 ### **High-Level Components**
 
 My guess is this is where the postgresql and AWS info goes...
+
+Speak about why i used X amount of controllers/models/views in rails
 
 (R15)
 
