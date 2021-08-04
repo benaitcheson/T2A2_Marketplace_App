@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   get "/register", to: "planner#register"
 
-  # get "/index", to: "planner#index"
+  get "/index", to: "planner#index"
 
-  # get "/howto/", to: "planner#howto"
+  get "/howto/", to: "planner#howto"
 
-  # get "/products", to: "planner#products"
+  get "/products", to: "planner#products"
 
 end
