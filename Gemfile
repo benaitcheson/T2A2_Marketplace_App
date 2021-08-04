@@ -51,7 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'stripe'
 gem 'ultrahook'
-gem 'bootstrap', '~> 5.0.1'
+gem 'bootstrap'
 gem 'simple_form'
 gem 'jquery-rails'
 gem "aws-sdk-s3", "~> 1.98"

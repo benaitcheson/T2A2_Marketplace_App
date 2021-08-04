@@ -231,7 +231,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3 (~> 1.98)
   bootsnap (>= 1.4.4)
-  bootstrap (~> 5.0.1)
+  bootstrap
   byebug
   devise
   jbuilder (~> 2.7)

@@ -3,31 +3,12 @@ Rails.application.routes.draw do
   devise_for :admins
   root to: "planner#index"
 
-  # view
-  get "/planner", to: "planner#index"
+  get "/register", to: "planner#register"
 
-  get "/planner/new", to: "planner#new"
+  get "/index", to: "planner#index"
 
-  get "/planner/:id", to: "planner#hide"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  # # controller
-  
-  # post "/planner", to: "planner#create"
+  get "/howto/", to: "planner#howto"
 
-  # get "/planner/:id", to: "planner#show"
-
-  
-
+  get "/products", to: "planner#products"
 
 end
