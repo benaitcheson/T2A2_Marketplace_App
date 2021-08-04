@@ -22,6 +22,7 @@
 <!-- TOC depthFrom:1 depthTo:4 withLinks:1 orderedList:0 -->
 
   - [About the Project](#about-the-project)
+    - [Admin Credentials](#admin-credentials) 
     - [Built With (Tech Stack)](#built-with-tech-stack)
     - [Statement of Purpose](#statement-of-purpose)
     - [Sitemap](#sitemap)
@@ -45,6 +46,12 @@
 
 This application was designed to make financial planning costs more competitive so the customer has better access to professional financial advice. Each planner registers their Australian Financial Services Licence (AFSL) and their background while each customer registers and completes the fact finder so that a planner can tailor their advice to each client. Paired with online advice this can give sound financial advice to younger investors at a cheaper rate.
 
+### **Admin Credentials**
+
+Before you use the app it's possible to play around as an admin. Here are the credentials to login in:
+- login: `admin`
+- password: `password1`
+
 ### **Built With (Tech Stack)**
 
 The core programming languages used to build this application are:
@@ -56,7 +63,7 @@ The core programming languages used to build this application are:
 
 These are stored within a public repository on GitHub, because this application has back-end components GitHub pages was inadequate. Heroku was used instead to host the application. Gems and third party software can be viewed [here](#third-party-appsservices).
 
-**Why I picked these. maybe?**
+> Why I picked these. maybe?
 
 (Part of R11)
 
@@ -188,6 +195,9 @@ Discuss the database relations to be implemented in the application.
 
 ### **Database Schema Design**
 
+
+
+
 (R19)
 
 ### **High-Level Components**
@@ -202,7 +212,9 @@ Speak about why i used X amount of controllers/models/views in rails
 
 ### **Third Party Apps/Services**
 
-- Devise:
+Here are the third party applications used for Find-A-Planner, in no particular order:
+
+- Devise: A Ruby gem for creating user authentication. A quick alternative to creating authentication from scratch.
 - Heroku:
 - GitHub:
 - Git:
@@ -212,10 +224,10 @@ Speak about why i used X amount of controllers/models/views in rails
 - Trello/Jira:
 - Git Guardian:
 - DB Diagram.io:
-- Postgresql:
-- Amazon Web Services:
+- Amazon Web Services (S3):
 - Ultrahook: 
 - Visual Studio Code:
+- Simpleform
 - 
 
 (R16)

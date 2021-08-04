@@ -54,3 +54,4 @@ gem 'ultrahook'
 gem 'bootstrap', '~> 5.0.1'
 gem 'simple_form'
 gem 'jquery-rails'
+gem "aws-sdk-s3", "~> 1.98"
