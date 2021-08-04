@@ -215,7 +215,7 @@ Speak about why i used X amount of controllers/models/views in rails
 Here are the third party applications used for Find-A-Planner, in no particular order:
 
 - Devise: A Ruby gem for creating user authentication. A quick alternative to creating authentication from scratch.
-- Heroku:
+- Heroku: 
 - GitHub:
 - Git:
 - Stripe:
