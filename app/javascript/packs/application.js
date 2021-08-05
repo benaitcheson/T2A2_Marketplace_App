@@ -7,16 +7,12 @@
 // import Turbolinks from "turbolinks"
 // import * as ActiveStorage from "@rails/activestorage"
 // import "channels"
-// import "bootstrap"
-// import "../stylesheets/application"
 
 // Rails.start()
 // Turbolinks.start()
 // ActiveStorage.start()
 
 //= require jquery3
-//= require jquery_ujs
 //= require popper
-//= require turbolinks
-//= require bootstrap-sprockets
-//= require_tree .
+//= require bootstrap
+
