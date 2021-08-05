@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="navbar-brand mt-2 mt-lg-0" href="#">Find-A-Planner</a>
+            <%= link_to "Find-A-Planner", index_path, class: "navbar-brand mt-2 mt-lg-0" %>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <%= link_to "Products", products_path, class: "nav-link" %>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">How To</a>
+                    <%= link_to "How To", howto_path, class: "nav-link" %>
                 </li>
             </ul>
         </div>
         <div class="d-flex align-items-center">
-            <a class="text-reset me-3" href="#">Register</a>
-            <a class="text-reset me-3" href="#">Log in</a>
+            <%= link_to "Sign up", sign_up_path, class: "text-reset me-3" %>
+            <%= link_to "Sign In", sign_in_path, class: "text-reset me-3" %>
         </div>
     </div>
 </nav>
