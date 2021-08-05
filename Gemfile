@@ -53,6 +53,7 @@ gem 'stripe'
 gem 'ultrahook'
 gem 'bootstrap'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'sassc-rails', '>= 2.1.0' 
 gem "aws-sdk-s3", "~> 1.98"

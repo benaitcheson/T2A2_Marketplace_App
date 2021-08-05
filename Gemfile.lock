@@ -232,6 +232,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  autoprefixer-rails
   aws-sdk-s3 (~> 1.98)
   bootsnap (>= 1.4.4)
   bootstrap
