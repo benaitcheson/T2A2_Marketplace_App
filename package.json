@@ -18,5 +18,8 @@
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
