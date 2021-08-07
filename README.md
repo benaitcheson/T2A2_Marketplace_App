@@ -221,7 +221,7 @@ Here are the third party applications used for Find-A-Planner, in no particular 
 - [GitHub](https://github.com/): An online platform for users to store public and private coding projects for free. This platform pairs with Heroku. Github stores the code and Heroku provides the server to fetch the code and send it to the browser.
 - [Git](https://git-scm.com/): Version control software that is free. It helps the user keep track of changes allowing them to branch and rollback revisions.
 - [Stripe](https://stripe.com/en-au): This is an online company that processes payments for their customers so they don't have to deal with a lot of the legal and finance obligations that come with the transfer of money. They are powerful at collecting money from anyone in any country with minimal processing time. This service is not free.
-- [Bootstrap](https://getbootstrap.com/): Bootstrap makes putting HTML and CSS together on the web browser simple. By streamlining the code required visually appealing layouts can be
+- [Bootstrap 5](https://getbootstrap.com/): Bootstrap makes putting HTML and CSS together on the web browser simple. By streamlining the code required visually appealing layouts can be
 - [Balsamiq](https://balsamiq.com/): This program allows users with little amount of graphic design skills to make mock versions of websites, business cards and other mock ups.
 - [Trello](https://trello.com/) / [Jira](https://www.atlassian.com/software/jira): This is a project management tool used to keep track of features and items that need to be done. 
 - [Git Guardian](https://www.gitguardian.com/): This program scans the users GitHub account to ensure any passwords or keys aren't made public for someone to scrape and use for malicious activities.

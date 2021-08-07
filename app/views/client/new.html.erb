@@ -1,0 +1,14 @@
+<h1>Client Fact Finder - New Advice Request</h1>
+
+<%# Form Client Address %>
+
+<%= simple_form_for @user do |f| %>
+    <%= f.input :title %>
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.input :email, placeholder: 'user@domain.com' %>
+    <%= f.input :mobile %>
+    <%= f.input :dob %>
+
+    <%= f.button :submit %>
+<% end %>
