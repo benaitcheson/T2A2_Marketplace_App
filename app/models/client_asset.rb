@@ -1,0 +1,2 @@
+class ClientAsset < ApplicationRecord
+end

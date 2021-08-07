@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_02_044721) do
+ActiveRecord::Schema.define(version: 2021_08_07_034632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,18 +28,86 @@ ActiveRecord::Schema.define(version: 2021_08_02_044721) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "client_addresses", force: :cascade do |t|
+    t.string "unitnum"
+    t.integer "streetnum"
+    t.string "streetname"
+    t.string "suburb"
+    t.string "state"
+    t.integer "postcode"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_assets", force: :cascade do |t|
+    t.integer "ppor"
+    t.integer "contents"
+    t.integer "investproperty"
+    t.integer "business"
+    t.integer "collectable"
+    t.integer "share"
+    t.integer "cash"
+    t.integer "vehicles"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_goals", force: :cascade do |t|
+    t.string "shortgoal"
+    t.string "longgoal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_incomes", force: :cascade do |t|
+    t.integer "salary"
+    t.integer "dividends"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_liabilities", force: :cascade do |t|
+    t.integer "mortgage"
+    t.integer "margin"
+    t.integer "creditcard"
+    t.integer "vehicle"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "clients", force: :cascade do |t|
-    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "clientid"
+    t.integer "clienttitle"
+    t.integer "firstname"
+    t.integer "lastname"
+    t.integer "email"
+    t.integer "mobile"
+    t.integer "dateofbirth"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "order_qty"
+    t.integer "product_id"
+    t.integer "customer_id"
+    t.integer "total_price"
+    t.date "date_of_purchase"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "planners", force: :cascade do |t|
-    t.string "name"
     t.integer "afsl"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "state"
+    t.string "firstname"
+    t.string "lastname"
+    t.string "title"
   end
 
 end

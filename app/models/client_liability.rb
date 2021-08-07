@@ -1,0 +1,2 @@
+class ClientLiability < ApplicationRecord
+end
