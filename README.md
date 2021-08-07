@@ -200,6 +200,8 @@ Discuss the database relations to be implemented in the application.
 
 (R19)
 
+*ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.*
+
 ### **High-Level Components**
 
 My guess is this is where the postgresql and AWS info goes...
@@ -214,21 +216,21 @@ Speak about why i used X amount of controllers/models/views in rails
 
 Here are the third party applications used for Find-A-Planner, in no particular order:
 
-- Devise: A Ruby gem for creating user authentication. A quick alternative to creating authentication from scratch.
-- Heroku: 
-- GitHub:
-- Git:
-- Stripe:
-- Bootstrap (MAYBE):
-- Balsamiq:
-- Trello/Jira:
-- Git Guardian:
-- DB Diagram.io:
-- Amazon Web Services (S3):
-- Ultrahook: 
-- Visual Studio Code:
-- Simpleform
-- 
+- [Devise](https://github.com/heartcombo/devise): A Ruby gem for creating user authentication. A quick alternative to creating authentication from scratch.
+- [Heroku](https://www.heroku.com/): This is a cloud platform that lets the user build, deliver, monitor and scale applications. This means a user can host their full stack application on the internet for free.
+- [GitHub](https://github.com/): An online platform for users to store public and private coding projects for free. This platform pairs with Heroku. Github stores the code and Heroku provides the server to fetch the code and send it to the browser.
+- [Git](https://git-scm.com/): Version control software that is free. It helps the user keep track of changes allowing them to branch and rollback revisions.
+- [Stripe](https://stripe.com/en-au): This is an online company that processes payments for their customers so they don't have to deal with a lot of the legal and finance obligations that come with the transfer of money. They are powerful at collecting money from anyone in any country with minimal processing time. This service is not free.
+- [Bootstrap](https://getbootstrap.com/): Bootstrap makes putting HTML and CSS together on the web browser simple. By streamlining the code required visually appealing layouts can be
+- [Balsamiq](https://balsamiq.com/): This program allows users with little amount of graphic design skills to make mock versions of websites, business cards and other mock ups.
+- [Trello](https://trello.com/) / [Jira](https://www.atlassian.com/software/jira): This is a project management tool used to keep track of features and items that need to be done. 
+- [Git Guardian](https://www.gitguardian.com/): This program scans the users GitHub account to ensure any passwords or keys aren't made public for someone to scrape and use for malicious activities.
+- [DB Diagram.io](https://dbdiagram.io/home): A online platform used to give a visual display of the Entity Relationship Diagram for the back end on Find-A-Planner.
+- [Amazon Web Services (S3)](https://aws.amazon.com/s3/): A free cloud storage system. S3 stands for Simple Storage Service. This product offers instant scalability and lots of security. This was chosen over a simple link to images for security and bandwidth.
+- [Ultrahook](https://www.ultrahook.com/): An easy to use and free product for testing webhook endpoints in the local environment.
+- [Visual Studio Code](https://code.visualstudio.com/): The most popular code editing software with plenty of extensions to help code this application. VS Code is owned by Microsoft and is free to use.
+- [Simpleform](https://github.com/heartcombo/simple_form): This gem paired with Bootstrap makes user entry forms simple to setup and create. 
+- [Gloomaps](https://www.gloomaps.com/): An online sitemap creation platform. This application was easy to user and is free.
 
 (R16)
 
@@ -251,6 +253,7 @@ Describe the way tasks are allocated and tracked in the project.
 
 ## Roadmap
 
+In the future I would like to add some automation to the site. 
 
 ---
 
@@ -268,7 +271,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-Ben Aitcheson - [My Github account][insert link]
+Ben Aitcheson - [Github](https://github.com/benaitcheson) / [Website](https://www.benaitcheson.me/)
 
 ---
 
@@ -276,3 +279,5 @@ Ben Aitcheson - [My Github account][insert link]
 
 Thanks to the team at Coder Academy for their support.
 
+GoRails
+freeCodeCamp
