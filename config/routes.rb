@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "/admins/sign_up", to: "admin#sign_up", as: :sign_up
 
-  get "/admins/sign_out", to: "admin#sign_out", as: :sign_out
+  get "/admins/sign_out", to: "client#sign_out", as: :sign_out
 
   # route to customer fact finder once logged in
   get "/new", to: "client#new", as: :clientnew
