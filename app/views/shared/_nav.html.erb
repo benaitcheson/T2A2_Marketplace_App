@@ -16,6 +16,7 @@
         </div>
         <div class="d-flex align-items-center">
             <% if admin_signed_in? %>
+                <%= link_to "Edit Account", edit_admin_registration_path, class:"text-reset me-3"%>
                 <%= link_to "Logout", destroy_admin_session_path, :method => :delete, class:"text-reset me-3"%>
             <% else %>
                 <%= link_to "Sign up", sign_up_path, class: "text-reset me-3" %>

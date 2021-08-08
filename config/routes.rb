@@ -13,7 +13,11 @@ Rails.application.routes.draw do
 
   get "/admins/sign_up", to: "admin#sign_up", as: :sign_up
 
-  get "/admins/sign_out", to: "client#sign_out", as: :sign_out
+  devise_scope :admin do
+    get "/admins/sign_out" => "devise/sessions#destroy"
+  end
+
+  get "/admins/password/edit", to: "devise/password#edit"
 
   # route to customer fact finder once logged in
   get "/new", to: "client#new", as: :clientnew

@@ -16,8 +16,12 @@
   <body>
       <%= render partial: "shared/nav"%>
 
-        <p class="notice"><%= notice %>
-        <p class="alert"><%= alert %>
+        <% if notice %>
+          <p class="notice"><%= notice %>
+        <% end %>
+        <% if alert %>
+          <p class="alert"><%= alert %>
+        <% end %>
 
       <%= yield %>
       <%= render partial: "shared/stickyfooter"%>
