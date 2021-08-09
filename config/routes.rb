@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   # route to customer fact finder once logged in
   get "/new", to: "client#new", as: :clientnew
 
+  get "/new_advice", to: "client#new_advice"
+
 end
