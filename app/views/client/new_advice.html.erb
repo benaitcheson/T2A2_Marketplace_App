@@ -1,6 +1,10 @@
 <h1>Fill in the details</h1>
 
-<form action="/client/advice" method="post">
+<%# <form action="<%= admin_path %>" method="post"> %>
+
+    <label>Title</label>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>%">
+
     <!-- Ask for Principle place of resident value -->
     <label>Rough amount your home is worth: </label>
     <input type="integer" name="PPOR">

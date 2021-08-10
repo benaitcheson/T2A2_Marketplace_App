@@ -4,17 +4,38 @@
 
 <h2>Current Advice Request</h2>
 
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-4">My Advice Page</h1>
-            <hr class="my-4">
-            <p class="lead"><%= link_to "Add Advice", new_advice_path, class:"btn btn-primary btn-lg"%></p>
-            <%# <p class="lead"><%= link_to "Show menu", advice_page_path, class:"btn btn-primary btn-lg"</p> %>
-        </div>
+<div class="row">
+    <div class="col-md-6">
+        <h1 class="display-4">My Advice Page</h1>
+        <hr class="my-4">
+        <p class="lead"><%= link_to "Add Advice", new_advice_path, class:"btn btn-primary btn-lg"%></p>
+        <%# <p class="lead"><%= link_to "Show menu", advice_page_path, class:"btn btn-primary btn-lg"</p> %>
     </div>
 </div>
 
+<div>
+    <h2>List of Current Advice</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Advice Type</th>
+                <th>Planner Assigned (Y/N)</th>
+                <th>Planner Name</th>
+                <th>Advice Completed</th>
+            </tr>
+        </thead>
 
+        <tbody>
+            <% @admin.each do |admin| %>
+                <tr>
+                    <td><%= admin.order_id %></td>
+                    <td><%= admin.type %></td>
+                    <td><%= admin.assigned %></td>
+                    <td><%= admin.planner %></td>
+                    <td><%= admin.completed %></td>
+                </tr>
+        </tbody>
+</div>
 
 <%# Make new advice button %>

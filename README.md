@@ -208,6 +208,9 @@ My guess is this is where the postgresql and AWS info goes...
 
 Speak about why i used X amount of controllers/models/views in rails
 
+Rails
+Fat Model, skinny Controller
+
 (R15)
 
 *Precisely explains and shows understanding of the different high-level components of the app*
