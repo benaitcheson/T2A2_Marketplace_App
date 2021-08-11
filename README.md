@@ -49,7 +49,7 @@ This application was designed to make financial planning costs more competitive 
 ### **Admin Credentials**
 
 Before you use the app it's possible to play around as an admin. Here are the credentials to login in:
-- login: `admin`
+- login: `admin@admin.com`
 - password: `password1`
 
 ### **Built With (Tech Stack)**
@@ -210,6 +210,10 @@ Speak about why i used X amount of controllers/models/views in rails
 
 Rails
 Fat Model, skinny Controller
+
+ActiveRecord with Ruby on Rails
+
+
 
 (R15)
 
