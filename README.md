@@ -193,6 +193,8 @@ The target audience for this application is people aged below 35 or someone with
 
 ### **Entity Relationship Diagram**
 
+The database uses a first normal form database design. This works well to help with privacy for each client as this application allows planner to view each customer when a customer has requested advice but the clients personal information stays hidden until request for advice is approved.
+
 (R14)
 
 Discuss the database relations to be implemented in the application.
@@ -264,10 +266,10 @@ This model holds all information regarding the admin level authentication. A use
 Clients can't see other clients but can see the list of planners and see the orders they have created. This model has Client_ID which is the primary key for Assets, Liabilities, Address, Income and Goals. These where separate under the first normal form guidelines.
 
 #### Client Assets
-
+Using the Client_ID to link this table. Each client has a single table (a one to one relation) of assets.
 
 #### Client Liabilities
-
+Similar to the Client Assets table the Liabilities table represents a one to one relation to the Client_ID from the Client table.
 
 #### Client Address
 
@@ -300,7 +302,7 @@ Describe the way tasks are allocated and tracked in the project.
 
 ## Roadmap
 
-In the future I would like to add some automation to the site. 
+In the future I would like to add some automation to the site. Possibly give some standard advice.
 
 ---
 
