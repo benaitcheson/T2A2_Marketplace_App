@@ -1,51 +1,53 @@
 <h1>Fill in the details</h1>
 
 <h2>Your Assets</h2>
-    <%= form_with model: @listings do |form| %>
+    <%= form_with model: @listing do |form| %>
         
         <%# Home %>
-        <%= f.label :ppor %>
-        <%= f.number_field :ppor, min: 0 %>
+        <%= form.label :ppor %>
+        <%= form.number_field :ppor, min: 0 %>
         <br>
 
         <%# Contents %>
-        <%= f.label :contents %>
-        <%= f.number_field :contents, min: 0 %>
+        <%= form.label :contents %>
+        <%= form.number_field :contents, min: 0 %>
         <br>
 
         <%# Investment Property %>
-        <%= f.label :investproperty %>
-        <%= f.number_field :investproperty, min: 0 %>
+        <%= form.label :investproperty %>
+        <%= form.number_field :investproperty, min: 0 %>
         <br>
 
         <%# Business %>
-        <%= f.label :business %>
-        <%= f.number_field :business, min: 0 %>
+        <%= form.label :business %>
+        <%= form.number_field :business, min: 0 %>
         <br>
 
         <%# Collectables %>
-        <%= f.label :collectable %>
-        <%= f.number_field :collectable, min: 0 %>
+        <%= form.label :collectable %>
+        <%= form.number_field :collectable, min: 0 %>
         <br>
 
         <%# Shares %>
-        <%= f.label :share %>
-        <%= f.number_field :share, min: 0 %>
+        <%= form.label :share %>
+        <%= form.number_field :share, min: 0 %>
         <br>
 
         <%# Cash at Bank %>
-        <%= f.label :cash %>
-        <%= f.number_field :cash, min: 0 %>
+        <%= form.label :cash %>
+        <%= form.number_field :cash, min: 0 %>
         <br>
 
         <%# Vehicles %>
-        <%= f.label :vehicles %>
-        <%= f.number_field :vehicles, min: 0 %>
+        <%= form.label :vehicles %>
+        <%= form.number_field :vehicles, min: 0 %>
         <br>
 
         <%# Other %>
-        <%= f.label :other %>
-        <%= f.number_field :other, min: 0 %>
+        <%= form.label :other %>
+        <%= form.number_field :other, min: 0 %>
         <br>
+
+        <%= form.submit %>
         
     <% end %>

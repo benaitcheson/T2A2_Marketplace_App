@@ -24,4 +24,6 @@ Rails.application.routes.draw do
 
   get "/new_advice", to: "client#new_advice"
 
+  post "/new_advice", to: "client#new_advice"
+
 end
