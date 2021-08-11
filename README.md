@@ -32,8 +32,18 @@
     - [Entity Relationship Diagram](#entity-relationship-diagram)
     - [Database Schema Design](#database-schema-design)
     - [High-Level Components](#high-level-components)
+      - [ActiveRecord](#active-record)
+      - 
     - [Third Party Apps/Services](#third-party-appsservices)
     - [Explain the Rails Models](#explain-the-rails-models)
+      - [Admin](#admin)
+      - [Client](#clients)
+      - [Client Assets](#client-assets)
+      - [Client Liabilities](#client-liabilities)
+      - [Client Address](#client-address)
+      - [Client Income](#client-income)
+      - [Planner](#planners)
+      - [Order](#orders)
     - [Rails Controller](#rails-controller)
   - [Contributing](#contributing)
   - [Roadmap](#roadmap)
@@ -69,14 +79,14 @@ These are stored within a public repository on GitHub, because this application 
 
 ### **Statement of Purpose**
 
-Identify the problem you are trying to solve (R7)
+> Identify the problem you are trying to solve (R7)
 
 Research has uncovered the cost of financial advice and it has shown that for those with a lot the cost of advice is small but for those with a little (generally younger clients) the cost is a significant amount. With most Statements of Advice (SoA) in Australia starting at $1,500.00 this is 10% if your net worth is $15,000.
 
 
 
 
-Why is it a problem that needs solving? (R8)
+> Why is it a problem that needs solving? (R8)
 
 Younger people generally forego advice because they have time on their side. For example, make a crypto investment mistake and you have 40 years worth of working to get that bad investment back. With cheaper advice early on, younger investors can have a more stable path that could see them retire early.
 
@@ -230,20 +240,50 @@ Here are the third party applications used for Find-A-Planner, in no particular 
 - [Stripe](https://stripe.com/en-au): This is an online company that processes payments for their customers so they don't have to deal with a lot of the legal and finance obligations that come with the transfer of money. They are powerful at collecting money from anyone in any country with minimal processing time. This service is not free.
 - [Bootstrap 5](https://getbootstrap.com/): Bootstrap makes putting HTML and CSS together on the web browser simple. By streamlining the code required visually appealing layouts can be
 - [Balsamiq](https://balsamiq.com/): This program allows users with little amount of graphic design skills to make mock versions of websites, business cards and other mock ups.
-- [Trello](https://trello.com/) / [Jira](https://www.atlassian.com/software/jira): This is a project management tool used to keep track of features and items that need to be done. 
+- [Trello](https://trello.com/) / [Jira](https://www.atlassian.com/software/jira): This is a project management tool used to keep track of features and items that need to be done. My Trello board can be viewed [here](https://trello.com/b/UWs8TN6Q/marketplaceapp).
 - [Git Guardian](https://www.gitguardian.com/): This program scans the users GitHub account to ensure any passwords or keys aren't made public for someone to scrape and use for malicious activities.
 - [DB Diagram.io](https://dbdiagram.io/home): A online platform used to give a visual display of the Entity Relationship Diagram for the back end on Find-A-Planner.
 - [Amazon Web Services (S3)](https://aws.amazon.com/s3/): A free cloud storage system. S3 stands for Simple Storage Service. This product offers instant scalability and lots of security. This was chosen over a simple link to images for security and bandwidth.
 - [Ultrahook](https://www.ultrahook.com/): An easy to use and free product for testing webhook endpoints in the local environment.
 - [Visual Studio Code](https://code.visualstudio.com/): The most popular code editing software with plenty of extensions to help code this application. VS Code is owned by Microsoft and is free to use.
 - [Simpleform](https://github.com/heartcombo/simple_form): This gem paired with Bootstrap makes user entry forms simple to setup and create. 
-- [Gloomaps](https://www.gloomaps.com/): An online sitemap creation platform. This application was easy to user and is free.
+- [Gloomaps](https://www.gloomaps.com/): An online sitemap creation platform. Sitemaps help show an overall picture of how the pages of a website are structured. This can be helpful to quickly find certain parts of a website. This application was easy to use and is free.
 
 (R16)
 
 *Includes a complete and detailed description of third party services used in the app*
 
 ### **Explain the Rails Models**
+
+Rails uses models to access data from the database (in this case the postgres database) and hand these to the controller. Common rails mantra is 'fat model, skinny controller', which indicates that the model handles most of the work grabbing and sorting some data to hand over to the controller. Here are the Models used for this project and a short description of their tasks.
+
+#### Admin
+This model holds all information regarding the admin level authentication. A user signed in as an admin can see all the client information as well as all the available planners and their advice types.
+
+#### Clients
+Clients can't see other clients but can see the list of planners and see the orders they have created. This model has Client_ID which is the primary key for Assets, Liabilities, Address, Income and Goals. These where separate under the first normal form guidelines.
+
+#### Client Assets
+
+
+#### Client Liabilities
+
+
+#### Client Address
+
+
+#### Client Income
+
+
+#### Client Goals
+
+
+#### Planners
+
+
+#### Orders
+
+
 
 (R17)
 

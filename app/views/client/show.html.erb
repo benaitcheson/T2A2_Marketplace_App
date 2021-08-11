@@ -1,0 +1,27 @@
+<h1>Current Orders</h1>
+
+<div>
+    <h2>List of Current Advice</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Advice Type</th>
+                <th>Planner Assigned (Y/N)</th>
+                <th>Planner Name</th>
+                <th>Advice Completed</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <%= form_with do |admin| %>
+                <tr>
+                    <td><%= admin.order_id %></td>
+                    <td><%= admin.type %></td>
+                    <td><%= admin.assigned %></td>
+                    <td><%= admin.planner %></td>
+                    <td><%= admin.completed %></td>
+                </tr>
+            <% end %>
+        </tbody>
+</div>

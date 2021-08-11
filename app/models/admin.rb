@@ -4,7 +4,9 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :timeoutable
 
+
   def admin
+    # Need to write a method to grab admin deets
   end
 
 end

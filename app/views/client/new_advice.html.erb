@@ -1,55 +1,51 @@
 <h1>Fill in the details</h1>
 
-<form action="<%= admin_path %>" method="post">
+<h2>Your Assets</h2>
+    <%= form_with model: @listings do |form| %>
+        
+        <%# Home %>
+        <%= f.label :ppor %>
+        <%= f.number_field :ppor, min: 0 %>
+        <br>
 
-    <label>Title</label>
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>%">
+        <%# Contents %>
+        <%= f.label :contents %>
+        <%= f.number_field :contents, min: 0 %>
+        <br>
 
-    <!-- Ask for Principle place of resident value -->
-    <label>Rough amount your home is worth: </label>
-    <input type="integer" name="PPOR">
-    <br><br/>
+        <%# Investment Property %>
+        <%= f.label :investproperty %>
+        <%= f.number_field :investproperty, min: 0 %>
+        <br>
 
-    <!-- Ask for Contents value -->
-    <label>What is the value of your contents: </label>
-    <input type="integer" name="contents">
-    <br><br/>
+        <%# Business %>
+        <%= f.label :business %>
+        <%= f.number_field :business, min: 0 %>
+        <br>
 
-    <!-- Ask for Investment property values -->
-    <label>What is your investment property worth: </label>
-    <input type="integer" name="investment">
-    <br><br/>
+        <%# Collectables %>
+        <%= f.label :collectable %>
+        <%= f.number_field :collectable, min: 0 %>
+        <br>
 
-    <!-- Ask for business ownership value -->
-    <label>Do you own a business or part own, and what is it worth: </label>
-    <input type="integer" name="business">
-    <br><br/>
+        <%# Shares %>
+        <%= f.label :share %>
+        <%= f.number_field :share, min: 0 %>
+        <br>
 
-    <!-- Ask for Collectables value -->
-    <label>Do you own any collectables: </label>
-    <input type="integer" name="collectables">
-    <br><br/>
+        <%# Cash at Bank %>
+        <%= f.label :cash %>
+        <%= f.number_field :cash, min: 0 %>
+        <br>
 
-    <!-- Ask for Shares value -->
-    <label>What is the value of your share portfolio: </label>
-    <input type="integer" name="shares">
-    <br><br/>
+        <%# Vehicles %>
+        <%= f.label :vehicles %>
+        <%= f.number_field :vehicles, min: 0 %>
+        <br>
 
-    <!-- Ask for cash in bank -->
-    <label>How much cash do you have in the bank: </label>
-    <input type="integer" name="cash">
-    <br><br/>
-
-    <!-- Ask for vehicle value -->
-    <label>How much are your vehicles worth, don't take into account how much is owing: </label>
-    <input type="integer" name="vehicle">
-    <br><br/>
-
-    <!-- Ask for any other assets they can think of -->
-    <label>What is the value of anything else you can add to your assets: </label>
-    <input type="integer" name="other">
-    <br><br/>
-
-    <!-- Submit button -->
-    <input type="submit" value="Request Advice">
-</form>
+        <%# Other %>
+        <%= f.label :other %>
+        <%= f.number_field :other, min: 0 %>
+        <br>
+        
+    <% end %>
