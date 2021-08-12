@@ -92,7 +92,7 @@ Find-A-Planner can help put Advisors side by side in competition to lower their 
 
 Initially this is what I wanted to create for the Find-A-Planner application:
 
-<img src="../T2A2_Marketplace_App/docs/gloomap1.png" alt="Initial Sitemap">
+<img src="gloomap1.png" alt="Initial Sitemap" height="600px">
 
 Sitemap created with [Gloomaps](www.gloomaps.com).
 
@@ -100,7 +100,9 @@ Each person whether a planner or a customer has a different login screen. They t
 
 This is how it ended up:
 
-<img src="" alt="Final Sitemap">
+<img src="gloomap_158498c1.png" alt="Final Sitemap">
+
+Both planners and clients come through a login screen and are then redirected to their dashboard page where they can change details and view the list of requests.
 
 ### **Wireframes**
 
@@ -173,36 +175,212 @@ The target audience for this application is people aged below 35 or someone with
 
 #### As a Guest
 > As a guest, 
+> 
 > I can view financial planners in certain areas and what sorts of advice they provide, 
+> 
 > so I can easily go to them for the advice I require.
 
 #### As a Planner
 > As a planner, 
+> 
 > I can have all my clients come to me from one place, 
+> 
 > with their fact finder already filled out and ready to go, this will save me a lot of time and money.
 
 #### As a Client
 > As a customer of Find-A-Planner, 
+> 
 > I can compare financial planners against each other, 
+> 
 > so that I can get cheaper advice.
 
 #### Authentication
 > As a user of Find-A-Planner, 
+> 
 > I can have my information protected through authentication,
+> 
 > this allows me to use the application without worry from threats.
 
 ### **Entity Relationship Diagram**
 
 The database uses a first normal form database design. This works well to help with privacy for each client as this application allows planner to view each customer when a customer has requested advice but the clients personal information stays hidden until request for advice is approved.
 
-Discuss the database relations to be implemented in the application.
+I believe this database managed to achieve Second Normal Form (2NF). This is evident as the client data is separated out into a use for each table. Those are Client address, assets, liabilities, goals, income. To achieve third normal form (3NF) the database could separate out the address to have postcode and state as separate. Along with the client title or planner title.
+
+Here's the final database design:
+
+<img src="ERD.png" alt="ERD" height="900px">
+
 
 ### **Database Schema Design**
 
-Here is the copy of the database schema.
+Initially designing the schema and ERD together was made easy with DB Diagram. By creating a visual representation of the database coding the schema was required.
+
+Here's the initial database schema design from DB Diagram:
+
+```
+Project Find_A_Planner {
+  database_type: 'PostgreSQL'
+  Note: 'Connecting clients and planners in one space'
+}
+
+Table User {
+  username varchar [PK]
+  password varchar
+}
+
+Ref: User.username - Customer_Basic.username
+Ref: User.username - Planner.username
+
+Table Customer_Basic {
+  username varchar
+  customer_id integer [increment]
+  customer_title varchar
+  customer_fname varchar
+  customer_lname varchar
+  customer_email email
+  customer_mobileno integer
+  customer_dob date
+  created_at timestamp
+}
+
+Ref: Customer_Basic.customer_id < Order.customer_id
+Ref: Customer_Basic.customer_id - Customer_Factfind.customer_id
+Ref: Customer_Basic.customer_id - Customer_Address.customer_id
+Ref: Customer_Basic.customer_id - Customer_Expenses.customer_id
+Ref: Customer_Basic.customer_id - Customer_Assets.customer_id
+Ref: Customer_Basic.customer_id - Customer_Spouse.customer_id
+Ref: Customer_Basic.customer_id - Customer_Income.customer_id
+Ref: Customer_Basic.customer_id - Customer_Goals.customer_id
+Ref: Customer_Basic.customer_id - Customer_Liabilities.customer_id
+
+Table Customer_Spouse {
+  customer_id integer
+  spouse_title varchar
+  spouse_fname varchar
+  spouse_lname varchar
+  spouse_email email
+  spouse_mobileno integer
+  spouse_dob date
+}
+
+Table Customer_Address {
+  customer_id integer
+  unit_number integer
+  street_num integer //must enter
+  street_name varchar //must enter
+  suburb varchar //must enter
+  state varchar //must enter
+  postcode integer //must enter
+}
+
+Table Customer_Factfind {
+  customer_id integer
+  customer_smoke varchar
+  customer_maritalstatus varchar
+  customer_tfn integer
+  customer_dependant varchar
+  customer_occupation varchar
+}
+
+Table Customer_Income {
+  customer_id integer
+  customer_salary integer
+  customer_dividends integer
+  customer_other integer
+}
+
+Table Customer_Assets {
+  customer_id integer
+  customer_ppor integer
+  customer_contents integer
+  customer_invesment_property integer
+  customer_business_interest integer
+  customer_collectables integer
+  customer_shares integer
+  customer_cash_at_bank integer
+  customer_vehicles integer
+  customer_other integer
+}
+
+Table Customer_Liabilities {
+  customer_id integer
+  customer_mortgage_total integer
+  customer_margin integer
+  customer_credit_card integer
+  customer_vehicle_loan integer
+}
+
+Table Customer_Expenses {
+  customer_id integer
+  customer_rent integer
+  customer_mortgage integer
+  customer_water integer
+  customer_electricity integer
+  customer_gas integer
+  customer_mobile integer
+  customer_internet integer
+  customer_petrol integer
+  customer_loan integer
+  customer_expenses_total integer
+}
+
+Table Customer_Goals {
+  customer_id integer
+  customer_short_goal varchar
+  customer_long_goal varchar
+}
+
+Table Planner {
+  planner_id varchar [primary key, unique, increment]
+  planner_fname varchar
+  planner_lname varchar
+  planner_AFSL integer
+  planner_state varchar
+  image_id varchar
+  created_at timestamp
+  username varchar
+}
+
+Table Image_Table {
+  image_id varchar [primary key]
+}
+
+Ref: Image_Table.image_id - Planner.image_id
+
+Table Order {
+  order_id varchar [primary key]
+  order_qty integer
+  product_id integer //foreign key
+  advice_type varchar
+  customer_id varchar
+  price integer
+  date_of_purchase date
+  total_price integer
+}
+
+Table Advice {
+  product_id integer [primary key]
+  advice_type varchar
+  description varchar
+  price integer
+}
+
+Table Payment {
+  payment_id integer [primary key]
+  order_id integer
+}
+
+Ref: Order.order_id - Payment.order_id
+ref: Order.product_id - Advice.product_id
+
+```
+
+
+Here is the copy of the final database schema generated from the db migrations in ruby:
 
 ```ruby
-create_table "admins", force: :cascade do |t|
+  create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -213,6 +391,13 @@ create_table "admins", force: :cascade do |t|
     t.string "username"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "advicetypes", force: :cascade do |t|
+    t.integer "adviceid"
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "client_addresses", force: :cascade do |t|
@@ -295,7 +480,7 @@ create_table "admins", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
     t.string "title"
-    t.primary_key"plannerid"
+    t.string "plannerid"
   end
 ```
 
@@ -307,7 +492,11 @@ Ruby on Rails uses the Model, View and Controller framework. Each of these is a 
 
 The Controller will handle the HTTP request by checking the routes.rb file and if a match is found offers up the appropriate files from the View. Here's an example:
 
-<img src="" alt="Some routes in Rails">
+```ruby
+get "/admins/sign_in", to: "admin#sign_in", as: :sign_in
+```
+When a user clicks on the sign in button on the navbar the controller checks the routes for a path to do next. In this case it's a get request and it's just getting the sign in page from the views.
+
 
 
 My guess is this is where the postgresql and AWS info goes...

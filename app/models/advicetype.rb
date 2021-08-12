@@ -1,0 +1,2 @@
+class Advicetype < ApplicationRecord
+end
