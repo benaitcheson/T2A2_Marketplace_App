@@ -75,7 +75,7 @@ These are stored within a public repository on GitHub, because this application 
 
 > Why I picked these. maybe?
 
-(Part of R11)
+> (Part of R11)
 
 ### **Statement of Purpose**
 
@@ -94,9 +94,9 @@ Find-A-Planner can help put Advisors side by side in competition to lower their 
 
 
 
-*Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting*
+> *Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting*
 
-(Part of R11)
+> (Part of R11)
 
 ### **Sitemap**
 
@@ -116,7 +116,7 @@ This is how it ended up:
 
 > Blurb.
 
-(Part of R11)
+> (Part of R11)
 
 ### **Wireframes**
 
@@ -176,43 +176,55 @@ Planner Payment Mobile:
 Planner Payment Desktop:
 <img src="" alt="Planner Payment Desktop">
 
-*More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)*
+> *More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)*
 
 ### **Target Audience**
 
-The target audience for this application is people aged below 35 or someone with assets under $100,000. 
+The target audience for this application is people aged below 35 or someone with assets under $100,000. Anyone who has been to a financial planner and has been turned away or anyone who is wanting to compare the price of advice side by side. People who are comfortable to put their details into the application knowing the security will keep their information safe.
 
 
-(Part of R11)
+> (Part of R11)
 
 ### **User Stories**
 
-(R12)
+#### As a Guest
 
-*User stories are well thought out, relevant, and comprehensively cover the needs of the app*
+
+#### As a Planner
+
+
+#### As a Client
+
+
+#### Authentication
+
+
+> (R12)
+
+> *User stories are well thought out, relevant, and comprehensively cover the needs of the app*
 
 ### **Entity Relationship Diagram**
 
 The database uses a first normal form database design. This works well to help with privacy for each client as this application allows planner to view each customer when a customer has requested advice but the clients personal information stays hidden until request for advice is approved.
 
-(R14)
+> (R14)
 
 Discuss the database relations to be implemented in the application.
 
-*Provides coherent discussion of the database relations, with reference to the ERD*
+> *Provides coherent discussion of the database relations, with reference to the ERD*
 
-(R18)
+> (R18)
 
-*Flawless, complex, complete, and well thought through ERDs provided*
+> *Flawless, complex, complete, and well thought through ERDs provided*
 
 ### **Database Schema Design**
 
 
 
 
-(R19)
+> (R19)
 
-*ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.*
+> *ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.*
 
 ### **High-Level Components**
 
@@ -227,9 +239,9 @@ ActiveRecord with Ruby on Rails
 
 
 
-(R15)
+> (R15)
 
-*Precisely explains and shows understanding of the different high-level components of the app*
+> *Precisely explains and shows understanding of the different high-level components of the app*
 
 ### **Third Party Apps/Services**
 
@@ -251,9 +263,9 @@ Here are the third party applications used for Find-A-Planner, in no particular 
 - [Simpleform](https://github.com/heartcombo/simple_form): This gem paired with Bootstrap makes user entry forms simple to setup and create. 
 - [Gloomaps](https://www.gloomaps.com/): An online sitemap creation platform. Sitemaps help show an overall picture of how the pages of a website are structured. This can be helpful to quickly find certain parts of a website. This application was easy to use and is free.
 
-(R16)
+> (R16)
 
-*Includes a complete and detailed description of third party services used in the app*
+> *Includes a complete and detailed description of third party services used in the app*
 
 ### **Explain the Rails Models**
 
@@ -269,13 +281,13 @@ Clients can't see other clients but can see the list of planners and see the ord
 Using the Client_ID to link this table. Each client has a single table (a one to one relation) of assets.
 
 #### Client Liabilities
-Similar to the Client Assets table the Liabilities table represents a one to one relation to the Client_ID from the Client table.
+Similar to the Client Assets table the Liabilities table represents a one to one relation to the Client_ID from the Client table. This is a belongs_to for the Client table.
 
 #### Client Address
-
+This another belongs_to from the Client table but this one has sensitive information about the client.
 
 #### Client Income
-
+Each of these was broken up to separate data into a single purpose for each controller. This is another belongs_to from the Client table. The foreign key is the Client_ID, the same as Client_Assets, Client_Liabilities, Client_Address, Client_Income and Client_Goals.
 
 #### Client Goals
 
@@ -287,16 +299,17 @@ Similar to the Client Assets table the Liabilities table represents a one to one
 
 
 
-(R17)
+> (R17)
 
-*Complete discussion of the project’s models with an understanding of how its active record associations function*
+> *Complete discussion of the project’s models with an understanding of how its active record associations function*
 
 ### Rails Controller
 
-Describe the way tasks are allocated and tracked in the project.
-(R20)
+A Controller was created with a ```rails g controller``` function in the terminal for both the Client and the Planner.
 
-*Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used*
+> (R20)
+
+> *Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used*
 
 ---
 
