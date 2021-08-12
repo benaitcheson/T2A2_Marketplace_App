@@ -20,33 +20,40 @@
 ## Table of Contents
 
 <!-- TOC depthFrom:1 depthTo:4 withLinks:1 orderedList:0 -->
-
+- [Coder Academy - Ruby on Rails Marketplace Application](#coder-academy---ruby-on-rails-marketplace-application)
+  - [Table of Contents](#table-of-contents)
   - [About the Project](#about-the-project)
-    - [Admin Credentials](#admin-credentials) 
-    - [Built With (Tech Stack)](#built-with-tech-stack)
-    - [Statement of Purpose](#statement-of-purpose)
-    - [Sitemap](#sitemap)
-    - [Wireframes](#wireframes)
-    - [Target Audience](#target-audience)
-    - [User Stories](#user-stories)
-    - [Entity Relationship Diagram](#entity-relationship-diagram)
-    - [Database Schema Design](#database-schema-design)
-    - [High-Level Components](#high-level-components)
-      - [ActiveRecord](#active-record)
-      - 
-    - [Third Party Apps/Services](#third-party-appsservices)
-    - [Explain the Rails Models](#explain-the-rails-models)
+    - [**Admin Credentials**](#admin-credentials)
+    - [**Built With (Tech Stack)**](#built-with-tech-stack)
+    - [**Statement of Purpose**](#statement-of-purpose)
+    - [**Sitemap**](#sitemap)
+    - [**Wireframes**](#wireframes)
+    - [**Project Management**](#project-management)
+    - [**Target Audience**](#target-audience)
+    - [**User Stories**](#user-stories)
+      - [As a Guest](#as-a-guest)
+      - [As a Planner](#as-a-planner)
+      - [As a Client](#as-a-client)
+      - [Authentication](#authentication)
+    - [**Entity Relationship Diagram**](#entity-relationship-diagram)
+    - [**Database Schema Design**](#database-schema-design)
+    - [**High-Level Components**](#high-level-components)
+      - [Model-View-Controller (MVC)](#model-view-controller-mvc)
+      - [ActiveRecord](#activerecord)
+    - [**Third Party Apps/Services**](#third-party-appsservices)
+    - [**Explain the Rails Models**](#explain-the-rails-models)
       - [Admin](#admin)
-      - [Client](#clients)
+      - [Clients](#clients)
       - [Client Assets](#client-assets)
       - [Client Liabilities](#client-liabilities)
       - [Client Address](#client-address)
       - [Client Income](#client-income)
-      - [Planner](#planners)
-      - [Order](#orders)
-    - [Rails Controller](#rails-controller)
-  - [Contributing](#contributing)
+      - [Client Goals](#client-goals)
+      - [Planners](#planners)
+      - [Orders](#orders)
+    - [**Rails Controller**](#rails-controller)
   - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
   - [Authors](#authors)
   - [Acknowledgments](#acknowledgments)
 
@@ -73,30 +80,13 @@ The core programming languages used to build this application are:
 
 These are stored within a public repository on GitHub, because this application has back-end components GitHub pages was inadequate. Heroku was used instead to host the application. Gems and third party software can be viewed [here](#third-party-appsservices).
 
-> Why I picked these. maybe?
-
-> (Part of R11)
-
 ### **Statement of Purpose**
 
-> Identify the problem you are trying to solve (R7)
-
 Research has uncovered the cost of financial advice and it has shown that for those with a lot the cost of advice is small but for those with a little (generally younger clients) the cost is a significant amount. With most Statements of Advice (SoA) in Australia starting at $1,500.00 this is 10% if your net worth is $15,000.
-
-
-
-
-> Why is it a problem that needs solving? (R8)
 
 Younger people generally forego advice because they have time on their side. For example, make a crypto investment mistake and you have 40 years worth of working to get that bad investment back. With cheaper advice early on, younger investors can have a more stable path that could see them retire early.
 
 Find-A-Planner can help put Advisors side by side in competition to lower their rates for younger investors. This is a great alternative to help reduce costs for Advisors giving online advice to young investors who don't need complex advice.
-
-
-
-> *Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting*
-
-> (Part of R11)
 
 ### **Sitemap**
 
@@ -110,13 +100,7 @@ Each person whether a planner or a customer has a different login screen. They t
 
 This is how it ended up:
 
-> Insert final sitemap here.
-
 <img src="" alt="Final Sitemap">
-
-> Blurb.
-
-> (Part of R11)
 
 ### **Wireframes**
 
@@ -176,57 +160,155 @@ Planner Payment Mobile:
 Planner Payment Desktop:
 <img src="" alt="Planner Payment Desktop">
 
-> *More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app)*
+### **Project Management**
+
+Explain Trello
+
 
 ### **Target Audience**
 
 The target audience for this application is people aged below 35 or someone with assets under $100,000. Anyone who has been to a financial planner and has been turned away or anyone who is wanting to compare the price of advice side by side. People who are comfortable to put their details into the application knowing the security will keep their information safe.
 
-
-> (Part of R11)
-
 ### **User Stories**
 
 #### As a Guest
-
+> As a guest, 
+> I can view financial planners in certain areas and what sorts of advice they provide, 
+> so I can easily go to them for the advice I require.
 
 #### As a Planner
-
+> As a planner, 
+> I can have all my clients come to me from one place, 
+> with their fact finder already filled out and ready to go, this will save me a lot of time and money.
 
 #### As a Client
-
+> As a customer of Find-A-Planner, 
+> I can compare financial planners against each other, 
+> so that I can get cheaper advice.
 
 #### Authentication
-
-
-> (R12)
-
-> *User stories are well thought out, relevant, and comprehensively cover the needs of the app*
+> As a user of Find-A-Planner, 
+> I can have my information protected through authentication,
+> this allows me to use the application without worry from threats.
 
 ### **Entity Relationship Diagram**
 
 The database uses a first normal form database design. This works well to help with privacy for each client as this application allows planner to view each customer when a customer has requested advice but the clients personal information stays hidden until request for advice is approved.
 
-> (R14)
-
 Discuss the database relations to be implemented in the application.
-
-> *Provides coherent discussion of the database relations, with reference to the ERD*
-
-> (R18)
-
-> *Flawless, complex, complete, and well thought through ERDs provided*
 
 ### **Database Schema Design**
 
+Here is the copy of the database schema.
 
+```ruby
+create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
 
+  create_table "client_addresses", force: :cascade do |t|
+    t.string "unitnum"
+    t.integer "streetnum"
+    t.string "streetname"
+    t.string "suburb"
+    t.string "state"
+    t.integer "postcode"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
-> (R19)
+  create_table "client_assets", force: :cascade do |t|
+    t.integer "ppor"
+    t.integer "contents"
+    t.integer "investproperty"
+    t.integer "business"
+    t.integer "collectable"
+    t.integer "share"
+    t.integer "cash"
+    t.integer "vehicles"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
-> *ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). There may be a little duplication.*
+  create_table "client_goals", force: :cascade do |t|
+    t.string "shortgoal"
+    t.string "longgoal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_incomes", force: :cascade do |t|
+    t.integer "salary"
+    t.integer "dividends"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "client_liabilities", force: :cascade do |t|
+    t.integer "mortgage"
+    t.integer "margin"
+    t.integer "creditcard"
+    t.integer "vehicle"
+    t.integer "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "clientid"
+    t.integer "clienttitle"
+    t.integer "firstname"
+    t.integer "lastname"
+    t.integer "email"
+    t.integer "mobile"
+    t.integer "dateofbirth"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "order_qty"
+    t.integer "product_id"
+    t.integer "customer_id"
+    t.integer "total_price"
+    t.date "date_of_purchase"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "planners", force: :cascade do |t|
+    t.integer "afsl"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "title"
+    t.primary_key"plannerid"
+  end
+```
 
 ### **High-Level Components**
+
+#### Model-View-Controller (MVC)
+
+Ruby on Rails uses the Model, View and Controller framework. Each of these is a crucial component for this application. The controller is the centre of all this depending on how many Create, Read, Update and Delete (CRUD) operations you have could determine how many Controllers each application has. Find-A-Planner has two main Controllers, one to hand the CRUD operations for the clients or customers the second controller handles all the planner operations as well as the page navigation and payment methods using Stripe.
+
+The Controller will handle the HTTP request by checking the routes.rb file and if a match is found offers up the appropriate files from the View. Here's an example:
+
+<img src="" alt="Some routes in Rails">
+
 
 My guess is this is where the postgresql and AWS info goes...
 
@@ -235,13 +317,9 @@ Speak about why i used X amount of controllers/models/views in rails
 Rails
 Fat Model, skinny Controller
 
+#### ActiveRecord
+
 ActiveRecord with Ruby on Rails
-
-
-
-> (R15)
-
-> *Precisely explains and shows understanding of the different high-level components of the app*
 
 ### **Third Party Apps/Services**
 
@@ -262,10 +340,6 @@ Here are the third party applications used for Find-A-Planner, in no particular 
 - [Visual Studio Code](https://code.visualstudio.com/): The most popular code editing software with plenty of extensions to help code this application. VS Code is owned by Microsoft and is free to use.
 - [Simpleform](https://github.com/heartcombo/simple_form): This gem paired with Bootstrap makes user entry forms simple to setup and create. 
 - [Gloomaps](https://www.gloomaps.com/): An online sitemap creation platform. Sitemaps help show an overall picture of how the pages of a website are structured. This can be helpful to quickly find certain parts of a website. This application was easy to use and is free.
-
-> (R16)
-
-> *Includes a complete and detailed description of third party services used in the app*
 
 ### **Explain the Rails Models**
 
@@ -290,26 +364,17 @@ This another belongs_to from the Client table but this one has sensitive informa
 Each of these was broken up to separate data into a single purpose for each controller. This is another belongs_to from the Client table. The foreign key is the Client_ID, the same as Client_Assets, Client_Liabilities, Client_Address, Client_Income and Client_Goals.
 
 #### Client Goals
-
+This model holds larger text file for each clients short term and long term goals. As per the other models the foreign key (Client_ID) belongs_to the Client model/table and can be viewed by the planner who is preparing advice.
 
 #### Planners
-
+The Planners model can 'has_many' clients but belongs_to the admin model. Each planner can have an image so it will also belong_to an image model.
 
 #### Orders
+Finally the Orders model belongs_to the client model. Each order has only one client but each client can have many orders. Similarly each order can only have one payment method and vice versa.
 
-
-
-> (R17)
-
-> *Complete discussion of the project’s models with an understanding of how its active record associations function*
-
-### Rails Controller
+### **Rails Controller**
 
 A Controller was created with a ```rails g controller``` function in the terminal for both the Client and the Planner.
-
-> (R20)
-
-> *Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used*
 
 ---
 
@@ -339,7 +404,8 @@ Ben Aitcheson - [Github](https://github.com/benaitcheson) / [Website](https://ww
 
 ## Acknowledgments
 
-Thanks to the team at Coder Academy for their support.
+ - Thanks to the team at [Coder Academy](https://www.coderacademy.edu.au/) for their support.
 
-GoRails
-freeCodeCamp
+ - Videos from [GoRails](https://gorails.com/) helped a tonne.
+
+ - A page I've followed for a long time always has terrific materials and content, [freeCodeCamp](https://www.freecodecamp.org/).
