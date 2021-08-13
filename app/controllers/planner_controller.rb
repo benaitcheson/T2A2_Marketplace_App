@@ -9,23 +9,11 @@ class PlannerController < ApplicationController
         render :index
     end
 
-    def aboutus
-
-    end
-
     def howto
 
     end
 
-    def new
-
-    end
-
     def products
-
-    end
-
-    def register
 
     end
     
