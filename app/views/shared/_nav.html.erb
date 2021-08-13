@@ -9,8 +9,13 @@
                 <li class="nav-item">
                     <%= link_to "How To", howto_path, class: "nav-link" %>
                 </li>
+                <li class="nav-item">
+                    <%= link_to "Planners", planners_path, class: "nav-link" %>
+                </li>
                 <% if admin_signed_in? %>
-                    <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+                    <li class="nav-item">
+                        <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+                    </li>
                 <% end %>
             </ul>
         </div>

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "/products", to: "planner#products", as: :products
 
+  get "/planners", to: "planner#planners", as: :planners
+
   get "/admins/sign_in", to: "admin#sign_in", as: :sign_in
 
   get "/admins/sign_up", to: "admin#sign_up", as: :sign_up
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   get "/admins/password/edit", to: "devise/password#edit", as: :edit
 
   get "/dashboard", to: "client#dashboard", as: :dashboard
+
+  get "/new_advice", to: "client#new_advice", as: :new_advice
 
   post "/new_advice", to: "client#new_advice"
 
