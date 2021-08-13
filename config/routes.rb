@@ -19,11 +19,10 @@ Rails.application.routes.draw do
 
   get "/admins/password/edit", to: "devise/password#edit"
 
-  # route to customer fact finder once logged in
   get "/advicelist", to: "client#advicelist", as: :clientnew
 
   get "/new_advice", to: "client#new_advice"
 
-  post "/new_advice", to: "client#new_advice"
+  # post "/new_advice", to: "client#new_advice"
 
 end
