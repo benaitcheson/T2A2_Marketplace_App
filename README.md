@@ -35,7 +35,7 @@
       - [As a Planner](#as-a-planner)
       - [As a Client](#as-a-client)
       - [Authentication](#authentication)
-    - [**Entity Relationship Diagram**](#entity-relationship-diagram)
+    - [**Entity Relationship Diagram (ERD)**](#entity-relationship-diagram-erd)
     - [**Database Schema Design**](#database-schema-design)
     - [**High-Level Components**](#high-level-components)
       - [Model-View-Controller (MVC)](#model-view-controller-mvc)
@@ -108,64 +108,41 @@ Both planners and clients come through a login screen and are then redirected to
 
 This application follow the mobile first approach. The wireframes will consist of a mobile version then a desktop version. All other formats have been included in the road map but unfortunately do not have a timeframe for completion.
 
-Home Page Mobile:
-<img src="" alt="Home Page Mobile">
+Home Page Desktop and Mobile:
+<img src="Home Page - Desktop and Mobile.png" alt="Home Page Desktop and Mobile">
 
-Home Page Desktop:
-<img src="" alt="Home Page Desktop">
+How To Page Desktop and Mobile:
+<img src="How To Page - Desktop and Mobile.png" alt="How To Page Desktop and Mobile">
 
-How To Page Mobile:
-<img src="" alt="How To Page Mobile">
+Products Page Desktop and Mobile:
+<img src="Products Page - Desktop and Mobile.png" alt="Products Page Desktop and Mobile">
 
-How To Page Desktop:
-<img src="" alt="How To Page Desktop">
+Login and Register Page Mobile:
+<img src="Register_Login Page - Desktop and Mobile.png" alt="Login and Register Page Desktop and Mobile">
 
-Products Page Mobile:
-<img src="" alt="Products Page Mobil">
+About Us Page Desktop and Mobile:
+<img src="About Us Page - Desktop and Mobile.png" alt="About Us Page Desktop and Mobile">
 
-Products Page Desktop:
-<img src="" alt="Products Page Desktop">
+Fact Finder Desktop and Mobile:
+<img src="Fact Finder Page - Desktop and Mobile.png" alt="Fact Finder Page Desktop and Mobile">
 
-Client Login Page Mobile:
-<img src="" alt="Client Login Page Mobile">
-
-Client Login Page Desktop:
-<img src="" alt="Client Login Page Desktop">
-
-Client Dashboard Page Mobile:
-<img src="" alt="Client Dashboard Page Mobile">
-
-Client Dashboard Page Desktop:
-<img src="" alt="Client Dashboard Page Deskto">
-
-Client Payment Mobile:
-<img src="" alt="Client Payment Mobile">
-
-Client Payment Desktop:
-<img src="" alt="Client Payment Desktop">
-
-Planner Login Page Mobile:
-<img src="" alt="Planner Login Page Mobil">
-
-Planner Login Page Desktop:
-<img src="" alt="Planner Login Page Deskto">
-
-Planner Dashboard Page Mobile:
-<img src="" alt="Planner Dashboard Page Mobile">
-
-Planner Dashboard Page Desktop:
-<img src="" alt="Planner Dashboard Page Desktop">
-
-Planner Payment Mobile:
-<img src="" alt="Planner Payment Mobile">
-
-Planner Payment Desktop:
-<img src="" alt="Planner Payment Desktop">
+Orders Page Desktop and Mobile:
+<img src="Order Page - Desktop and Mobile.png" alt="Orders Page Desktop Mobile">
 
 ### **Project Management**
 
-Explain Trello
+Jira was initially set up to learn how ticketing works but was later removed due to the lack of requirement along side Trello for a team of one.
 
+Trello was the main source of management for this application. The initial steps were all put into Trello to give an overview of requirements from the start. Here is a [link](https://trello.com/b/UWs8TN6Q/marketplaceapp) to where it is currently at. 
+
+Trello was first created off a template and then populated with cards based off the marking rubric for the assignment. Here is the first Trello board:
+<img src="Trello 1.png" alt="my first trello board">
+
+The Readme file has the most tasks, so was put into one card.
+<img src="Trello Readme.png" alt="my first trello board">
+
+After completed a lot of the tasks you can see how keeping on top of tasks is easy with Trello. I the future I would like to be more specific with the cards created and make them more manageable.
+<img src="Trello 4.png" alt="my first trello board">
 
 ### **Target Audience**
 
@@ -201,11 +178,17 @@ The target audience for this application is people aged below 35 or someone with
 > 
 > this allows me to use the application without worry from threats.
 
-### **Entity Relationship Diagram**
+### **Entity Relationship Diagram (ERD)**
 
 The database uses a first normal form database design. This works well to help with privacy for each client as this application allows planner to view each customer when a customer has requested advice but the clients personal information stays hidden until request for advice is approved.
 
 I believe this database managed to achieve Second Normal Form (2NF). This is evident as the client data is separated out into a use for each table. Those are Client address, assets, liabilities, goals, income. To achieve third normal form (3NF) the database could separate out the address to have postcode and state as separate. Along with the client title or planner title.
+
+Here's how the ERD started:
+
+<img src="ERD Start.png" alt="ERD" height="900px">
+
+There wasn't much change to the ERD just relationships between the tables were amended to show one to one and one to many.
 
 Here's the final database design:
 
@@ -495,11 +478,13 @@ The Controller will handle the HTTP request by checking the routes.rb file and i
 ```ruby
 get "/admins/sign_in", to: "admin#sign_in", as: :sign_in
 ```
-When a user clicks on the sign in button on the navbar the controller checks the routes for a path to do next. In this case it's a get request and it's just getting the sign in page from the views.
+
+When a user clicks on the sign in button on the navbar the controller checks the routes for a path to do next. In this case it's a get request and it's just getting the sign in page from the admin views.
 
 
 
-My guess is this is where the postgresql and AWS info goes...
+
+
 
 Speak about why i used X amount of controllers/models/views in rails
 
