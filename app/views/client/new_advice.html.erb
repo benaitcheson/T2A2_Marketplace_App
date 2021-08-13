@@ -1,54 +1,51 @@
 <h1>Fill in the details</h1>
 
 <h2>Your Assets</h2>
-    <%= form_with model: @listing do |form| %>
-        
-        <%# Home %>
-        <%= form.label :ppor %>
-        <%= form.number_field :ppor, min: 0 %>
-        <br>
+    <%= simple_form_for (@advice) do |form| %>
+        <div class="form-inputs">
 
-        <%# Contents %>
-        <%= form.label :contents %>
-        <%= form.number_field :contents, min: 0 %>
-        <br>
+            <%# Home %>
+            <%= f.input :ppor %>
+            <br>
 
-        <%# Investment Property %>
-        <%= form.label :investproperty %>
-        <%= form.number_field :investproperty, min: 0 %>
-        <br>
+            <%# Contents %>
+            <%= f.input :contents %>
+            <br>
 
-        <%# Business %>
-        <%= form.label :business %>
-        <%= form.number_field :business, min: 0 %>
-        <br>
+            <%# Investment Property %>
+            <%= f.input :investproperty %>
+            <br>
 
-        <%# Collectables %>
-        <%= form.label :collectable %>
-        <%= form.number_field :collectable, min: 0 %>
-        <br>
+            <%# Business %>
+            <%= f.input :business %>
+            <br>
 
-        <%# Shares %>
-        <%= form.label :share %>
-        <%= form.number_field :share, min: 0 %>
-        <br>
+            <%# Collectables %>
+            <%= f.input :collectable %>
+            <br>
 
-        <%# Cash at Bank %>
-        <%= form.label :cash %>
-        <%= form.number_field :cash, min: 0 %>
-        <br>
+            <%# Shares %>
+            <%= f.input :share %>
+            <br>
 
-        <%# Vehicles %>
-        <%= form.label :vehicles %>
-        <%= form.number_field :vehicles, min: 0 %>
-        <br>
+            <%# Cash at Bank %>
+            <%= f.input :cash %>
+            <br>
 
-        <%# Other %>
-        <%= form.label :other %>
-        <%= form.number_field :other, min: 0 %>
-        <br>
+            <%# Vehicles %>
+            <%= f.input :vehicles %>
+            <br>
 
-        <%= form.submit %>
+            <%# Other %>
+            <%= f.input :other %>
+            <br>
+
+        </div>
+
+        <div class="form-actions">
+            <%= f.button :submit %>
+        </div>
+
     <% end %>
 
 Once the first form works I'll make the rest
