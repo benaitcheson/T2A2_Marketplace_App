@@ -1,7 +1,7 @@
 class ClientController < ApplicationController
 
-    def new
-            @listing = listing.new
+    def advicelist
+            
     end
 
     def new_advice

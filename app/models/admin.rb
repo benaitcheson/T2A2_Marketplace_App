@@ -7,6 +7,7 @@ class Admin < ApplicationRecord
 
   def admin
     # Need to write a method to grab admin deets
+    @listing = Admin::Listing(:name)
   end
 
 end

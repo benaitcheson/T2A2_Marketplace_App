@@ -65,7 +65,7 @@ This application was designed to make financial planning costs more competitive 
 
 ### **Admin Credentials**
 
-Before you use the app it's possible to play around as an admin. Here are the credentials to login in:
+Before you use the app it's possible to play around as an admin for both the customer and the planner. Here are the credentials to login in:
 - login: `admin@admin.com`
 - password: `password1`
 
@@ -146,7 +146,7 @@ After completed a lot of the tasks you can see how keeping on top of tasks is ea
 
 ### **Target Audience**
 
-The target audience for this application is people aged below 35 or someone with assets under $100,000. Anyone who has been to a financial planner and has been turned away or anyone who is wanting to compare the price of advice side by side. People who are comfortable to put their details into the application knowing the security will keep their information safe.
+The target audience for this application are people aged below 35 or someone with assets under $100,000. Anyone who has been to a financial planner and has been turned away or anyone who is wanting to compare the price of advice side by side. People who are comfortable to put their details into the application knowing the security will keep their information safe.
 
 ### **User Stories**
 
@@ -480,16 +480,6 @@ get "/admins/sign_in", to: "admin#sign_in", as: :sign_in
 ```
 
 When a user clicks on the sign in button on the navbar the controller checks the routes for a path to do next. In this case it's a get request and it's just getting the sign in page from the admin views.
-
-
-
-
-
-
-Speak about why i used X amount of controllers/models/views in rails
-
-Rails
-Fat Model, skinny Controller
 
 #### ActiveRecord
 
