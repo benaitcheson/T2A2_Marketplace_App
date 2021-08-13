@@ -4,17 +4,17 @@ class ClientController < ApplicationController
     # skip_before_action :verify_authenticity_token, only: [:show]
     # before_action :authenticate_admin! 
 
-    # GET /listings
+    # GET /clients
     def index
         @clients = Client.all
     end
 
-    # GET /listings/new
+    # GET /clients/new
     def new
         @client = Client.new
     end
 
-    # POST /listings
+    # POST /clients
     def create
         @client = Client.new(params[:ppor])
         if @client.save
