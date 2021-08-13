@@ -1,10 +1,6 @@
 class ClientController < ApplicationController
 
-    def advicelist
-            
+    def dashboard
     end
-
-    def new_advice
-    end
-
+    
 end

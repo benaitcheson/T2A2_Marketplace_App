@@ -13,15 +13,13 @@ Rails.application.routes.draw do
 
   get "/admins/sign_up", to: "admin#sign_up", as: :sign_up
 
-  # devise_scope :admin do
-  #   get "/admins/sign_out" => "devise/sessions#destroy"
-  # end
+  devise_scope :admin do
+    get "/admins/sign_out" => "devise/sessions#destroy"
+  end
 
-  # get "/admins/password/edit", to: "devise/password#edit"
+  get "/admins/password/edit", to: "devise/password#edit", as: :edit
 
-  # get "/advicelist", to: "client#advicelist", as: :clientnew
-
-  # get "/new_advice", to: "client#new_advice"
+  get "/dashboard", to: "client#dashboard", as: :dashboard
 
   # post "/new_advice", to: "client#new_advice"
 
