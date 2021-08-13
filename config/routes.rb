@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get "/admins/sign_out" => "devise/sessions#destroy"
   end
 
-  # get "/admins/password/edit", to: "devise/password#edit"
+  get "/admins/password/edit", to: "devise/password#edit"
 
   get "/advicelist", to: "client#advicelist", as: :clientnew
 

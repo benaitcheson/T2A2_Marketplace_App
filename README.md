@@ -92,7 +92,7 @@ Find-A-Planner can help put Advisors side by side in competition to lower their 
 
 Initially this is what I wanted to create for the Find-A-Planner application:
 
-<img src="gloomap1.png" alt="Initial Sitemap" height="600px">
+<img src="/app/assets/images/Readme%20pics/gloomap1.png" alt="Initial Sitemap" height="600px">
 
 Sitemap created with [Gloomaps](www.gloomaps.com).
 

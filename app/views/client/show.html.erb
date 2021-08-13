@@ -1,5 +1,5 @@
 <h1>Current Orders</h1>
-
+<%# 
 <div>
     <h2>List of Current Advice</h2>
     <table class="table">
@@ -15,13 +15,9 @@
 
         <tbody>
             <%= form_with do |admin| %>
-                <tr>
-                    <td><%= admin.order_id %></td>
-                    <td><%= admin.type %></td>
-                    <td><%= admin.assigned %></td>
-                    <td><%= admin.planner %></td>
-                    <td><%= admin.completed %></td>
-                </tr>
+                <%# <tr>
+                    <%# <td><%= admin.order_id %>
+                <%# </tr>
             <% end %>
-        </tbody>
-</div>
+        <%# </tbody>
+</div> %>
