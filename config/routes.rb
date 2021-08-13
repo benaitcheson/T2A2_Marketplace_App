@@ -21,6 +21,6 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "client#dashboard", as: :dashboard
 
-  # post "/new_advice", to: "client#new_advice"
+  post "/new_advice", to: "client#new_advice"
 
 end
