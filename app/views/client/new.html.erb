@@ -1,51 +1,7 @@
 <h1>Fill in the details</h1>
 
 <h2>Your Assets</h2>
-    <%= simple_form_for (@client) do |f| %>
-        <div class="form-inputs">
+    
+<%= render 'form' %>
 
-            <%# Home %>
-            <%= f.input :ppor %>
-            <br>
-
-            <%# Contents %>
-            <%= f.input :contents %>
-            <br>
-
-            <%# Investment Property %>
-            <%= f.input :investproperty %>
-            <br>
-
-            <%# Business %>
-            <%= f.input :business %>
-            <br>
-
-            <%# Collectables %>
-            <%= f.input :collectable %>
-            <br>
-
-            <%# Shares %>
-            <%= f.input :share %>
-            <br>
-
-            <%# Cash at Bank %>
-            <%= f.input :cash %>
-            <br>
-
-            <%# Vehicles %>
-            <%= f.input :vehicles %>
-            <br>
-
-            <%# Other %>
-            <%= f.input :other %>
-            <br>
-
-        </div>
-
-        <div class="form-actions">
-            <%= f.button :submit %>
-        </div>
-
-    <% end %>
-
-Once the first form works I'll make the rest
+Once the first form works I'll make the rest:

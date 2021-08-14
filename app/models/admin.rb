@@ -4,7 +4,7 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :timeoutable
 
-  has_one :clients
-  has_one :planners
+  has_one :client
+  has_one :planner
 
 end

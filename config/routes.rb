@@ -25,6 +25,4 @@ Rails.application.routes.draw do
 
   get "clients/new", to: "client#new"
 
-  post "clients/new", to: "client#new"
-
 end
