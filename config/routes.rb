@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   resource :client
 
   # Just can't get my page working :/
-  get "/clients/new", to: "clients#new"
+  get "/client/new", to: "client#new"
 
   # This route
   post "/client", to: "client#create", as: 'client_assets'

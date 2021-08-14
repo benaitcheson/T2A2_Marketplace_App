@@ -538,13 +538,13 @@ Finally the Orders model belongs_to the client model. Each order has only one cl
 
 ### **Rails Controller**
 
-A Controller was created with a ```rails g controller``` function in the terminal for both the Client and the Planner.
+A Controller was created with a ```rails g controller``` function in the terminal for both the Client and the Planner. These were setup to handle CRUD methods. I created a devise controller called admin in hopes of having an admin too.
 
 ---
 
 ## Roadmap
 
-In the future I would like to add some automation to the site. Possibly give some standard advice.
+In the future I would like to add some automation to the site. Possibly give some standard advice. After I get the site fully functioning.
 
 ---
 
