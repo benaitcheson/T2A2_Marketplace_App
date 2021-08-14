@@ -1,25 +1,29 @@
 class ClientController < ApplicationController
 
     def index
-        @clients = ClientAsset.all
+        @client = Client.all
     end
 
     def new
-        @clients = ClientAsset.new
+        @client = Client.new
     end
 
+
+    # Method to post form to database
     def create
-        @clients = ClientAsset.new(client_asset_params)
-        if @clients.save
-            redirect_to @clients
+        @client = Client.new(client_asset_params)
+        if @client.save
+            redirect_to @client
         else
             render :new
         end
     end
 
     private
+
+    # Method to stop unwanted users feeding wrong info to the database
     def client_asset_params
-        params.require(:id).permit(
+        params.permit(
             :ppor,
             :contents,
             :investproperty,
